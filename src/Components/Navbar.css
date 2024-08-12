@@ -1,0 +1,481 @@
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 100px;
+}
+
+span{
+    color:#7d2ae8;
+}
+
+h1{
+    font-size:36px;
+    color: white;
+}
+
+.navbar-text{
+    display:flex;
+    align-items: center;
+    gap:50px;
+}
+
+.nav-links ul{
+    display:flex;
+    gap:60px;
+}
+
+.nav-links li{
+    list-style-type: none;
+    font-size:18px;
+    transition:0.4s;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color:white;
+}
+
+.navbar-button button{
+    border:none;
+    border-radius:10px;
+    color:white;
+    background-color: #7d2ae8;
+    padding:10px 30px;
+    font-size:20px;
+    transition:0.4s;
+}
+
+.social-links{
+    display:flex;
+    gap:20px;
+    align-items: center;
+}
+
+.social-links i{
+    color:white;
+    transition:0.4s;
+}
+
+.social-links a{
+    text-decoration: none;
+}
+
+/* Hover Class */
+
+.nav-links li:hover{
+    transition:0.4s;
+    transform:scale(1.15);
+    cursor:pointer;
+}
+
+.navbar-button button:hover{
+    transition:0.4s;
+    transform:scale(1.15);
+    cursor:pointer;
+}
+
+.navbar-button button:active{
+    background-color: #8b3cf4;
+}
+
+.social-links i:hover{
+    transition:0.4s;
+    transform:scale(1.18);
+}
+
+
+/* Off screen menu*/
+
+.off-scrren-menu{
+    background-color: aliceblue;
+    height:100vh;
+    width:100%;
+    max-width:450px;
+}
+
+.open-menu{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbar{
+        padding:10px 90px;
+    }
+
+    .navbar i {
+        color:white;
+    }
+    .social-links{
+        gap:20px;
+    }
+    .nav-links, .social-links i{
+        display: block;
+    }
+
+    .nav-links ul {
+        /* Existing styles */
+        display: block;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: fixed;
+        top: 0;
+        right: -250px; /* This keeps the menu off-screen */
+        height: 100vh;
+        width: 250px;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        
+    }
+
+    .nav-links li a{
+        color:black;
+    }
+
+    .social-links i{
+        color:black;
+    }
+    
+    .nav-links.is-open ul {
+        right: 0; /* This brings the menu on-screen */
+    }
+
+    .nav-links ul li{
+        margin: 30px 15px;
+        font-size: 20px; /* Adjust font size for better readability on mobile */
+    }
+    .nav-links .social-links i{
+        margin:20px 15px;
+    }
+
+    .open-menu {
+        display: block;
+    }
+  }
+
+  @media(max-width:680px){
+    .navbar{
+        max-width:680px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: #222222;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:660px){
+    .navbar{
+        max-width:660px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:640px){
+    .navbar{
+        max-width:640px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:600px){
+    .navbar{
+        max-width:600px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:560px){
+    .navbar{
+        max-width:560px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:520px){
+    .navbar{
+        max-width:520px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+
+@media(max-width:480px){
+    .navbar{
+        max-width:480px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+    .nav-links ul {
+        width: 80%; /* Take up full width of the screen */
+        right: -100%; /* Start off-screen */
+    }
+    
+    .nav-links.is-open ul {
+        right: 0; /* This brings the menu on-screen */
+    }
+
+}
+
+@media(max-width:460px){
+    .navbar{
+        max-width:460px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+
+@media(max-width:420px){
+    .navbar{
+        max-width:420px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:400px){
+    .navbar{
+        max-width:400px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+
+@media(max-width:380px){
+    .navbar{
+        max-width:380px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:360px){
+    .navbar{
+        max-width:360px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+@media(max-width:340px){
+    .navbar{
+        max-width:340px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+}
+
+
+@media(max-width:320px){
+    .navbar{
+        max-width:320px;
+        padding:10px 20px;
+    }
+
+    h1{
+        font-size:30px;
+        color: white;
+    }
+
+    .navbar-button button{
+        border:none;
+        border-radius:10px;
+        color:white;
+        background-color: #7d2ae8;
+        padding:10px 20px;
+        font-size:16px;
+        transition:0.4s;
+    }
+
+}
