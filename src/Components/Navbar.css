@@ -156,6 +156,23 @@ h1{
     .open-menu {
         display: block;
     }
+
+       /* Overlay to close the menu */
+       .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999; /* Below the menu, but above the page content */
+    }
+
+    .nav-links.is-open ~ .menu-overlay {
+        display: block;
+    }
+    
   }
 
   @media(max-width:680px){

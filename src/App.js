@@ -6,6 +6,7 @@ import React from 'react';
 import Projects from './Components/Projects';
 import Form from './Components/Contact';
 import LandingPage from './Components/LandingPage';
+import AutoScrollBar from './Components/Scrollbar';
 
 function App() {
   return (

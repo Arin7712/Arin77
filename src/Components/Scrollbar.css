@@ -1,0 +1,33 @@
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap; /* Ensures items stay in one line */
+    background-color: #f0f0f0; /* Background color of the scroll bar */
+  }
+  
+  .scroll-content {
+    display: inline-flex;
+    width: 200%; /* Double the width to accommodate the duplicate items */
+    animation: scroll 20s linear infinite;
+  }
+  
+  .item {
+    flex-shrink: 0;
+    width: 150px; /* Width of each item */
+    margin-right: 20px; /* Space between items */
+    background-color: #4caf50; /* Background color of each item */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

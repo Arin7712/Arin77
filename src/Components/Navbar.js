@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './Navbar.css'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -10,6 +10,20 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen((open) => !open)
   }
+
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest('.navbar') && !event.target.closest('.open-menu')) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMenuOpen]);
   return (
     <div className='navbar'>
       <i className="open-menu fa-solid fa-bars fa-xl" onClick={toggleMenu}></i>
@@ -35,7 +49,7 @@ const Navbar = () => {
         <div className="navbar-button">
             <AnchorLink href='#contact'><button>Let's Talk</button></AnchorLink>
         </div>
-        
+        {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
     </div>
   )
 }
